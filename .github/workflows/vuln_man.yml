@@ -81,7 +81,7 @@ jobs:
            --type docker
            --format json
            --spec-version="1.5"
-           --project-name="${{  project[0] }}"
+           --project-name="${{  matrix.project[0] }}"
            --project-version="build-${{ github.run_number }}"
            -o "${{ project }}-docker_bom.json"
            image:tag
